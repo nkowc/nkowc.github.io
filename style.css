@@ -1,0 +1,203 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 头部样式 */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 主要内容容器 */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1 {
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+h3 {
+    color: #5a5a5a;
+    margin: 15px 0 10px;
+    font-size: 1.4rem;
+}
+
+/* 描述文本 */
+.description {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* 分割线 */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 25px 0;
+}
+
+/* 声音样本区域 */
+.voice-section {
+    margin-top: 20px;
+}
+
+.voice-sample {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.voice-sample:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* 下载链接 */
+.download-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: #4a89dc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #3b7dd8;
+}
+
+/* 音频播放器 */
+.audio-player {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 页脚样式 */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #fff;
+    color: #777;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+/* 添加在原有CSS中 */
+/* 语言切换过渡效果 */
+[data-i18n] {
+    transition: opacity 0.3s ease;
+}
+
+.language-changing {
+    opacity: 0.5;
+}
+
+/* 语言切换按钮样式 */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.lang-btn {
+    padding: 6px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.lang-btn.active {
+    background-color: #4a89dc;
+    color: white;
+    border-color: #3b7dd8;
+}
+/* 语言切换器样式 */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.lang-btn.active {
+    background-color: #4a89dc;
+    color: white;
+    border-color: #3b7dd8;
+}
