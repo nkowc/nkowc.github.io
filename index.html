@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changchw</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./主圖.png" alt="Changchw主圖" class="header-image">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="zh">中文</button>
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="ja">日本語</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <main>
+            <h1 data-i18n="aboutTitle">About 常馳?</h1>
+            <p class="description" data-i18n="aboutDesc">
+                他是由<b>Wuxin</b>製作的一個UTAU音源聲庫。<br>
+                雖然沒有明確的正式發佈，你也可以通過以下內容下載。
+            </p>
+            
+            <h2 data-i18n="currentPlans">目前計劃</h2>
+            <p>
+                <span data-i18n="plan1">1.英語音源聲庫正在製作中。</span><br>
+                <span data-i18n="plan2">2.中文音源聲庫計劃考慮中。</span><br>
+                <span data-i18n="plan3">3.白話音源聲庫計劃考慮中。</span>
+            </p>
+            
+            <hr class="divider">
+            
+            <div class="voice-section">
+                <h3 data-i18n="japanese">日語</h3>
+                <div class="voice-sample">
+                    <p data-i18n="voice1Desc">音質很差的基礎音，適合強勁的音樂</p>
+                    <a href="https://bowlroll.net/file/339502" class="download-link" data-i18n="voice1Link">基礎的聲音</a>
+                    <audio src="01.wav" controls class="audio-player"></audio>
+                </div>
+                
+                <div class="voice-sample">
+                    <p data-i18n="voice2Desc">像是鼻炎犯了的聲音，適合於柔和的音樂</p>
+                    <a href="https://bowlroll.net/file/339730" class="download-link" data-i18n="voice2Link">柔和的聲音</a>
+                    <audio src="02.wav" controls class="audio-player"></audio>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>@2025</p>
+    </footer>
+
+    <script src="language.js"></script>
+</body>
+</html>
