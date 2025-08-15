@@ -3,45 +3,48 @@ const translations = {
     zh: {
         aboutTitle: "About 常馳?",
         aboutDesc: "他是由<b>Wuxin</b>製作的一個UTAU音源聲庫。<br>雖然沒有明確的正式發佈，你也可以通過以下內容下載。",
-        currentPlans: "目前計劃",
-        plan1: "1.英語音源聲庫正在製作中。",
-        plan2: "2.中文音源聲庫計劃考慮中。",
-        plan3: "3.白話音源聲庫計劃考慮中。",
         japanese: "日語",
         voice1Desc: "音質很差的基礎音，適合強勁的音樂",
         voice1Link: "基礎的聲音",
         voice2Desc: "像是鼻炎犯了的聲音，適合於柔和的音樂",
         voice2Link: "柔和的聲音",
+        Chinese:"中文",
+        voice3Desc:"單音階CVVC，適合柔和的音樂",
+        voice4Desc:"英语样本：8 mins<br>中文样本：15 mins<br>日语样本：7 mins",
+        voice5Desc:"<b>由UTAU輸出訓練</b>",
+        voice6Desc:"中文样本：19 mins<br>日语样本：15 mins",
         languageName: "中文",
         languageSuggestion: "我們檢測到您的瀏覽器語言是{0}，是否切換到該語言？"
     },
     en: {
         aboutTitle: "About Changchw?",
         aboutDesc: "It is a UTAU voicebank created by <b>Wuxin</b>.<br>Although not officially released, you can download it from the following content.",
-        currentPlans: "Current Plans",
-        plan1: "1.English voicebank is in production.",
-        plan2: "2.Chinese voicebank is under consideration.",
-        plan3: "3.Cantonese voicebank is under consideration.",
         japanese: "Japanese",
         voice1Desc: "Basic voice with poor quality, suitable for strong music",
         voice1Link: "Basic Voice",
         voice2Desc: "Sounds like having a stuffy nose, suitable for soft music",
         voice2Link: "Soft Voice",
+        Chinese:"Chinese",
+        voice3Desc:"Single scale CVVC, suitable for soft music",
+        voice4Desc:"English sample: 8 mins <br>Chinese sample: 15 mins <br>Japanese sample: 7 mins",
+        voice5Desc:"<b>Trained by UTAU output</b>",
+        voice6Desc:"Chinese sample:19 mins<br>Japanese sample:15 mins",
         languageName: "English",
         languageSuggestion: "We detected your browser language is {0}. Would you like to switch to this language?"
     },
     ja: {
         aboutTitle: "常馳について",
         aboutDesc: "<b>Wuxin</b>によって作成されたUTAU音源ボイスバンクです。<br>正式リリースはされていませんが、以下の内容からダウンロードできます。",
-        currentPlans: "現在の計画",
-        plan1: "1.英語音源ボイスバンク制作中。",
-        plan2: "2.中国語音源ボイスバンク検討中。",
-        plan3: "3.広東語音源ボイスバンク検討中。",
         japanese: "日本語",
         voice1Desc: "音質が悪い基本音、力強い音楽に適しています",
         voice1Link: "基本音声",
         voice2Desc: "鼻が詰まったような音声、柔らかい音楽に適しています",
         voice2Link: "柔らかい音声",
+        Chinese:"中国語",
+        voice3Desc:"単音階CVVC、柔らかい音楽に適している",
+        voice4Desc:"英語サンプル：8 mins<br>中国語サンプル：15 mins<br>日本語サンプル：7 mins",
+        voice5Desc:"<b>UTAU出力によるトレーニング</b>",
+        voice6Desc:"中国語サンプル：19 mins<br>日本語サンプル：15 mins",
         languageName: "日本語",
         languageSuggestion: "ブラウザの言語が{0}であることを検出しました。この言語に切り替えますか？"
     }
@@ -160,3 +163,43 @@ function initLanguage() {
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', initLanguage);
+
+// 添加到language.js
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTopButton = document.getElementById('back-to-top');
+  const progressCircle = document.querySelector('.progress-circle-prog');
+  
+  // 更新进度和显示/隐藏按钮
+  window.addEventListener('scroll', function() {
+    const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = (window.pageYOffset / scrollTotal) * 138;
+    
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add('visible');
+      progressCircle.style.strokeDashoffset = 138 - scrollProgress;
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+  
+  // 平滑滚动到顶部
+  backToTopButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
+    // 添加点击动画
+    this.classList.add('clicked');
+    setTimeout(() => this.classList.remove('clicked'), 300);
+  });
+});
+// 使用防抖技術優化滾動事件
+let scrollTimeout;
+window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+        // 滾動處理代碼
+    }, 100);
+});

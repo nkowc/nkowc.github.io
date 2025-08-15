@@ -8,12 +8,19 @@
 </head>
 <body>
     <header>
-        <img src="./主圖.png" alt="Changchw主圖" class="header-image">
+        <img src="./主圖.png" alt="Changchw主圖" class="header-image" title="@灰獭">
         <div class="language-switcher">
             <button class="lang-btn active" data-lang="zh">中文</button>
             <button class="lang-btn" data-lang="en">English</button>
             <button class="lang-btn" data-lang="ja">日本語</button>
         </div>
+        <button id="back-to-top" class="back-to-top" aria-label="回到顶部">
+  <svg class="progress-circle" width="50" height="50" viewBox="0 0 50 50">
+    <circle class="progress-circle-back" cx="25" cy="25" r="22"/>
+    <circle class="progress-circle-prog" cx="25" cy="25" r="22"/>
+  </svg>
+  <span class="arrow">↑</span>
+</button>
     </header>
     
     <div class="container">
@@ -24,15 +31,14 @@
                 雖然沒有明確的正式發佈，你也可以通過以下內容下載。
             </p>
             
-            <h2 data-i18n="currentPlans">目前計劃</h2>
-            <p>
-                <span data-i18n="plan1">1.英語音源聲庫正在製作中。</span><br>
-                <span data-i18n="plan2">2.中文音源聲庫計劃考慮中。</span><br>
-                <span data-i18n="plan3">3.白話音源聲庫計劃考慮中。</span>
-            </p>
+            <link rel="icon" href="favicon.ico" type="image/x-icon">
+            <button id="back-to-top" class="back-to-top" aria-label="回到頂部" aria-hidden="true"></button>
             
             <hr class="divider">
             
+            <h1>UTAU</h1>
+            <main>
+                <!-- 內容 -->
             <div class="voice-section">
                 <h3 data-i18n="japanese">日語</h3>
                 <div class="voice-sample">
@@ -47,6 +53,30 @@
                     <audio src="02.wav" controls class="audio-player"></audio>
                 </div>
             </div>
+            <div>
+            <div class="voice-section">
+                <h3 data-i18n="Chinese">中文</h3>
+                <div class="voice-sample">
+                    <p data-i18n="voice3Desc">單音階CVVC，適合柔和的音樂</p>
+                    <a href="https://bowlroll.net/file/340647" class="download-link" data-i18n="voice2Link">柔和的聲音</a>
+                    <audio src="03.wav" controls class="audio-player"></audio>
+                </div>
+            </div>
+            </main>
+
+            <h1>ACE Studio</h1>
+            <main>
+            <div class="voice-sample">
+                <p data-i18n="voice4Desc">英语样本：8 mins<br>中文样本：15 mins<br>日语样本：7 mins</p>
+                <audio src="1-0.wav" controls class="audio-player"></audio>
+            </div>
+
+                <div class="voice-sample">
+                    <p data-i18n="voice5Desc"><b>由UTAU輸出訓練</b></p>
+                    <p data-i18n="voice6Desc">中文样本：19 mins<br>日语样本：15 mins</p>
+                    <audio src="1-1.wav" controls class="audio-player"></audio>
+                </div>
+            </main>
         </main>
     </div>
     
