@@ -10,9 +10,9 @@ const translations = {
         voice2Link: "柔和的聲音",
         Chinese:"中文",
         voice3Desc:"單音階CVVC，適合柔和的音樂",
-        voice4Desc:"英语样本：8 mins<br>中文样本：15 mins<br>日语样本：7 mins",
+        voice4Desc:"英語樣本：8 mins<br>中文樣本：15 mins<br>日語樣本：7 mins",
         voice5Desc:"<b>由UTAU輸出訓練</b>",
-        voice6Desc:"中文样本：19 mins<br>日语样本：15 mins",
+        voice6Desc:"中文樣本：19 mins<br>日語樣本：15 mins",
         languageName: "中文",
         languageSuggestion: "我們檢測到您的瀏覽器語言是{0}，是否切換到該語言？"
     },

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+    <script src="transitions.js" defer></script>
+    <script>
+    // 检查是否是首次访问
+    if(sessionStorage.getItem('visited') !== 'true') {
+        sessionStorage.setItem('visited', 'true');
+        window.location.href = "loading.html";
+    }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changchw</title>
@@ -8,7 +16,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="page-enter">
     <header>
         <img src="./主圖.png" alt="Changchw主圖" class="header-image" title="@灰獭">
         <div class="language-switcher">
@@ -38,6 +46,8 @@
             
             <hr class="divider">
             
+            
+
             <h1>UTAU</h1>
             <main>
                 <!-- 內容 -->
@@ -81,11 +91,14 @@
             </main>
         </main>
     </div>
-    
+        <div class="changelog-link-container">
+        <a href="Changelog.html" class="changelog-link">查看更新日志</a>
+    </div>
     <footer>
         <p>@2025</p>
     </footer>
 
+    
     <script src="language.js"></script>
 </body>
 </html>

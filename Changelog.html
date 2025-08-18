@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <script src="transitions.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日誌 - Changchw</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        h2 {
+            color: #bb86fc;
+            border-bottom: 2px solid #3700b3;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+        
+        .changelog-entry {
+            margin-bottom: 25px;
+            padding: 18px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            border-left: 4px solid #3700b3;
+            transition: transform 0.3s ease;
+        }
+        
+        .changelog-entry:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .date {
+            font-weight: bold;
+            color: #bb86fc;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .changes {
+            margin-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .changes li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .changes li:before {
+            content: "•";
+            color: #bb86fc;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #7f7f7f;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #bb86fc;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #3700b3;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background-color: #3700b3;
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3700b3;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #bb86fc;
+        }
+    </style>
+</head>
+<body class="page-enter">
+    <main>
+        <h2>更新日誌</h2>
+        
+        <div class="changelog-entry">
+            <span class="date">08/18/25</span>
+            <ul class="changes">
+                <li>新增兩個頁面</li>
+            </ul>
+        </div>
+        
+        <div class="changelog-entry">
+            <span class="date">08/16/25</span>
+            <ul class="changes">
+                <li>首次發佈</li>
+            </ul>
+        </div>
+        
+        <a href="index.html" class="back-link">← 返回首頁</a>
+    </main>
+    
+    <footer>
+        <p>© 2025 Changchw. 保留所有權利</p>
+    </footer>
+    
+</body>
+</html>
