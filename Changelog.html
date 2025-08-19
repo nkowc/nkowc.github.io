@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+    <div class="logo-container">
+    <a href="index.html">
+        <img src="logo.png" alt="Changchw" class="site-logo" width="64" height="64">
+    </a>
+</div>
+
+<style>
+.site-logo {
+    width: 64px;
+    height: auto;
+    max-width: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transition: all 0.3s ease;
+}
+
+.site-logo:hover {
+    opacity: 0.9;
+    transform: rotate(5deg);
+}
+
+@media (max-width: 768px) {
+    .site-logo {
+        width: 48px;
+    }
+}
+</style>
     <script src="transitions.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,14 +137,51 @@
         }
     </style>
 </head>
+<div class="bubble-container">
+    <div class="speech-bubble">
+        <p>居然有人看？！<br>不怎麼更新網站。</p>
+    </div>
+</div>
+
+<style>
+.speech-bubble {
+    position: relative;
+    background: #333;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid #3700b3;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #3700b3 transparent transparent;
+}
+
+.speech-bubble p {
+    margin: 0;
+    color: #bb86fc;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+</style>
 <body class="page-enter">
     <main>
         <h2>更新日誌</h2>
         
         <div class="changelog-entry">
-            <span class="date">08/18/25</span>
+            <span class="date">08/19/25</span>
             <ul class="changes">
-                <li>新增兩個頁面</li>
+                <li>小更新：1.新增此頁與加載頁，<br>2.修改音頻，<br>3.新增視頻鏈接。</li>
             </ul>
         </div>
         

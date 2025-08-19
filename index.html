@@ -16,6 +16,32 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+<div class="logo-container">
+    <a href="index.html">
+        <img src="logo.png" alt="Changchw" class="site-logo" width="64" height="64">
+    </a>
+</div>
+
+<style>
+.site-logo {
+    width: 64px;
+    height: auto;
+    max-width: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transition: all 0.3s ease;
+}
+
+.site-logo:hover {
+    opacity: 0.9;
+    transform: rotate(5deg);
+}
+
+@media (max-width: 768px) {
+    .site-logo {
+        width: 48px;
+    }
+}
+</style>
 <body class="page-enter">
     <header>
         <img src="./主圖.png" alt="Changchw主圖" class="header-image" title="@灰獭">
@@ -64,13 +90,68 @@
                     <a href="https://bowlroll.net/file/339730" class="download-link" data-i18n="voice2Link">柔和的聲音</a>
                     <audio src="02.wav" controls class="audio-player"></audio>
                 </div>
+                <div class="download-section">
+
+    <h4 data-i18n="japanese1">日語綜合音源</h4>
+    <div class="voice-sample">
+    <a href="https://www.mediafire.com/file/rlu3w5glkk1m5jt/Changchw__Comprehensive.rar/file" class="download-link">DOWNLOAD</a>
+</div>
+</div>
+
+<style>
+.download-btn {
+    background: linear-gradient(135deg, #4a6fa5, #2c4a7a);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(74, 111, 165, 0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(74, 111, 165, 0.4);
+    background: linear-gradient(135deg, #5a7fb5, #3c5a8a);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+.file-size {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.btn-icon {
+    font-size: 18px;
+}
+</style>
+
+<script>
+document.querySelector('.download-btn').addEventListener('click', function() {
+    const fileName = this.getAttribute('data-file');
+    const link = document.createElement('a');
+    link.href = fileName;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
             </div>
             <div>
             <div class="voice-section">
                 <h3 data-i18n="Chinese">中文</h3>
                 <div class="voice-sample">
-                    <p data-i18n="voice3Desc">單音階CVVC，適合柔和的音樂</p>
-                    <a href="https://bowlroll.net/file/340647" class="download-link" data-i18n="voice2Link">柔和的聲音</a>
+                    <p data-i18n="voice3Desc">CVVC，有明顯口音</p>
+                    <a href="https://bowlroll.net/file/340647" class="download-link" data-i18n="voice1Link">基礎的聲音</a>
                     <audio src="03.wav" controls class="audio-player"></audio>
                 </div>
             </div>
